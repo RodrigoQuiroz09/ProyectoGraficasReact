@@ -1,0 +1,59 @@
+.App {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+}
+.volumen {
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 350px;
+
+  position: absolute;
+}
+
+.volumen > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.volumen .texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Special Elite", cursive;
+  font-size: 1.5rem;
+}
+
+.camara {
+  top: 0;
+  right: 0;
+  height: 200px;
+  width: 390px;
+
+  position: absolute;
+}
+
+.camara > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.camara:hover {
+  opacity: 0.8;
+}
+
+.camara .texto {
+  position: absolute;
+  padding-top: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Special Elite", cursive;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
