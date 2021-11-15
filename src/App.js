@@ -15,7 +15,7 @@ var pingPongDelay = new Pizzicato.Effects.PingPongDelay({
 
 let renderer = null, scene = null, frontCamera = null, backCamera=null,currentCamera=null,root = null, orbitControls = null,control;
 
-let raycaster = null, mouse = new THREE.Vector2(), clicked;
+let raycaster = null, mouse = new THREE.Vector2(), intersected, clicked;
 
 let directionalLightFront = null, spotLight = null, directionalLightBack = null, bulbLight =null;
 
@@ -178,7 +178,7 @@ class App extends Component {
     string1 = new THREE.Mesh( geometryBox, new THREE.MeshLambertMaterial( { color:"#fff"} ) );
     string1.name = 'Cuerda';
     string1.position.set(-25, 45 ,-100);
-    scene.add( string1 );
+    //scene.add( string1 );
     scene.add(directionalLightFront);
     
     spotLight = new THREE.SpotLight (0xffffff);
@@ -269,12 +269,15 @@ class App extends Component {
     skybox.castShadow = true
     skybox.receiveShadow = true;
     scene.add( skybox ); 
-   // this.loadGLTF()
+    this.loadGLTF()
     this.loadLamp()
     const helper = new THREE.CameraHelper( directionalLightFront.shadow.camera,10 );
     scene.add( helper );
 
-    //document.addEventListener('pointerdown', this.onDocumentPointerDown);
+    document.addEventListener('pointermove', this.onDocumentPointerMove );
+
+    document.addEventListener('pointerdown', this.onDocumentPointerDown);
+
 
     return renderer.domElement;
   }
@@ -306,96 +309,128 @@ class App extends Component {
     this.renderizar()
   }
 
-  onDocumentPointerDown(event)
+  onDocumentPointerMove( event ) 
   {
-      event.preventDefault();
       mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
       mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-  
+      console.log()
       raycaster.setFromCamera( mouse, currentCamera );
-      console.log(objects[0].children)
-      let intersects = raycaster.intersectObjects( objects[1].children );
-  
-      if ( intersects.length > 0) 
+      //console.log(objects[0].children)
+      
+      const intersects = raycaster.intersectObjects( objects[0].children );
+
+      if ( intersects.length > 0 ) 
       {
-          clicked = intersects[ 0 ].object;
-          console.log(clicked)
-          //clicked.material.emissive.set( 0x00ff00 );
-          if(clicked.name==='Cuerda1' && front) 
+          if ( intersected != intersects[ 0 ].object ) 
           {
-            sound = new Pizzicato.Sound( './sounds/E4.mp3' , () => {
-              if(ghostBool)sound.addEffect(pingPongDelay);
-              //sound.addEffect(quadrafuzz);
-              sound.volume = this.state.volume/10;
-              sound.play();
-            });
+              if ( intersected )
+                  intersected.material.emissive.set( intersected.currentHex );
+
+              intersected = intersects[ 0 ].object;
+              intersected.currentHex = intersected.material.emissive.getHex();
+              intersected.material.emissive.set( 0xff0000 );
           }
-          if(clicked.name==='Cuerda6'&& front) 
-          {
-            sound = new Pizzicato.Sound( './sounds/E5.mp3' , () => {
-              if(ghostBool)sound.addEffect(pingPongDelay);
-              //sound.addEffect(quadrafuzz);
-              sound.volume = this.state.volume/10;
-              sound.play();
-            });
-          }
-          if(clicked.name==='Cuerda5'&& front) 
-          {
-            sound = new Pizzicato.Sound( './sounds/B5.mp3' , () => {
-              if(ghostBool)sound.addEffect(pingPongDelay);
-              //sound.addEffect(quadrafuzz);
-              sound.volume = this.state.volume/10;
-              sound.play();
-            });
-          }
-          if(clicked.name==='Cuerda4'&& front) 
-          {
-            sound = new Pizzicato.Sound( './sounds/G5.mp3' , () => {
-              if(ghostBool)sound.addEffect(pingPongDelay);
-              //sound.addEffect(quadrafuzz);
-              sound.volume = this.state.volume/10;
-              sound.play();
-            });
-          }
-          if(clicked.name==='Cuerda3'&& front) 
-          {
-            sound = new Pizzicato.Sound( './sounds/D5.mp3' , () => {
-              if(ghostBool)sound.addEffect(pingPongDelay);
-              //sound.addEffect(quadrafuzz);
-              sound.volume = this.state.volume/10;
-              sound.play();
-            });
-          }
-          if(clicked.name==='Cuerda2'&& front) 
-          {
-            sound = new Pizzicato.Sound( './sounds/A5.mp3' , () => {
-              if(ghostBool)sound.addEffect(pingPongDelay);
-              //sound.addEffect(quadrafuzz);
-              sound.volume = this.state.volume/10;
-              sound.play();
-            });
-          }
-          if(clicked.name==='selector_Cube095_1')
-          {
-           
-            ghostBool=!ghostBool
-          }
-          if(clicked.name==="controls_Circle_Circle002")
-          {
-            if(this.state.volume<10) this.setState({ volume: this.state.volume + 1 })
-          }          
-          if(clicked.name==="controls_Circle_Circle003")
-          {
-            if(this.state.volume>0) this.setState({ volume: this.state.volume - 1 })
-          }
-      }  else
+      } 
+      else 
       {
-  
+          if ( intersected ) 
+              intersected.material.emissive.set( intersected.currentHex );
+
+          intersected = null;
+      }
+  }
+
+  onDocumentPointerDown(event)
+  {
+    event.preventDefault();
+    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+    raycaster.setFromCamera( mouse, currentCamera );
+    console.log(objects[0].children)
+    let intersects = raycaster.intersectObjects( objects[1].children );
+
+    if ( intersects.length > 0) 
+    {
+      clicked = intersects[ 0 ].object;
+      console.log(clicked)
+      //clicked.material.emissive.set( 0x00ff00 );
+      if(clicked.name==='Cuerda1' && front) 
+      {
+        sound = new Pizzicato.Sound( './sounds/E4.mp3' , () => {
+          if(ghostBool)sound.addEffect(pingPongDelay);
+          //sound.addEffect(quadrafuzz);
+          sound.volume = this.state.volume/10;
+          sound.play();
+        });
+      }
+      if(clicked.name==='Cuerda6'&& front) 
+      {
+        sound = new Pizzicato.Sound( './sounds/E5.mp3' , () => {
+          if(ghostBool)sound.addEffect(pingPongDelay);
+          //sound.addEffect(quadrafuzz);
+          sound.volume = this.state.volume/10;
+          sound.play();
+        });
+      }
+      if(clicked.name==='Cuerda5'&& front) 
+      {
+        sound = new Pizzicato.Sound( './sounds/B5.mp3' , () => {
+          if(ghostBool)sound.addEffect(pingPongDelay);
+          //sound.addEffect(quadrafuzz);
+          sound.volume = this.state.volume/10;
+          sound.play();
+        });
+      }
+      if(clicked.name==='Cuerda4'&& front) 
+      {
+        sound = new Pizzicato.Sound( './sounds/G5.mp3' , () => {
+          if(ghostBool)sound.addEffect(pingPongDelay);
+          //sound.addEffect(quadrafuzz);
+          sound.volume = this.state.volume/10;
+          sound.play();
+        });
+      }
+      if(clicked.name==='Cuerda3'&& front) 
+      {
+        sound = new Pizzicato.Sound( './sounds/D5.mp3' , () => {
+          if(ghostBool)sound.addEffect(pingPongDelay);
+          //sound.addEffect(quadrafuzz);
+          sound.volume = this.state.volume/10;
+          sound.play();
+        });
+      }
+      if(clicked.name==='Cuerda2'&& front) 
+      {
+        sound = new Pizzicato.Sound( './sounds/A5.mp3' , () => {
+          if(ghostBool)sound.addEffect(pingPongDelay);
+          //sound.addEffect(quadrafuzz);
+          sound.volume = this.state.volume/10;
+          sound.play();
+        });
+      }
+      if(clicked.name==='selector_Cube095_1')
+      {
+        
+        ghostBool=!ghostBool
+      }
+      if(clicked.name==="controls_Circle_Circle002")
+      {
+        if(this.state.volume<10) this.setState({ volume: this.state.volume + 1 })
+      }          
+      if(clicked.name==="controls_Circle_Circle003")
+      {
+        if(this.state.volume>0) this.setState({ volume: this.state.volume - 1 })
+      }
+    }  
+    else
+      {
+
           if ( clicked ) 
           {
               clicked.material.emissive.set( clicked.currentHex );
           }
-  
+
           clicked = null;
       }
   }
