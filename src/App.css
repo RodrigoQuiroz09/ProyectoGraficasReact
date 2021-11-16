@@ -3,6 +3,13 @@
   overflow-y: hidden;
   text-align: center;
 }
+
+.loading {
+  display: block;
+  margin: 0 auto;
+  background: red;
+}
+
 .volumen {
   bottom: 0;
   right: 0;
@@ -56,4 +63,50 @@
   font-family: "Special Elite", cursive;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  height: 200px;
+  width: 380px;
+
+  position: absolute;
+}
+
+.background > img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.background > img:hover {
+  opacity: 0.8;
+}
+
+.background > img.active {
+  box-shadow: 0 0 25px rgb(122, 243, 66), 0 0 15px darkblue;
+}
+.effect {
+  bottom: 0;
+  left: 0;
+  height: 200px;
+  width: 390px;
+
+  position: absolute;
+}
+.effect > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.effect .texto {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Special Elite", cursive;
+  color: #fff;
+  font-size: 1.5rem;
 }
