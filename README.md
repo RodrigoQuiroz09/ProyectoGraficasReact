@@ -1,13 +1,14 @@
 # Proyecto-Graficas TC3022
 ## Integrantes
-Christopher Luis Miranda Vanegas A01022676
 
-Rodrigo Quiroz Reyes A01026546
+* Christopher Luis Miranda Vanegas A01022676 Campus CSF
+
+* Rodrigo Quiroz Reyes A01026546 Campus CSF
 
 ## Avance Final
-Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A continuación se muestra el [modelo final](#modelo-final) de la guitarra en *Blender*, con texturas y materiales aplicados. Como se mencionó, buscamos crear una guitarra con estilo steampunk, es por esta razón que se usaron diferentes engranes, monedas, cadenes, tuercas y ornamentos.
+Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A continuación, se muestra el [modelo final](#modelo-final) de la guitarra en *Blender*, con texturas y materiales aplicados. Como se mencionó, buscamos crear una guitarra con estilo steampunk, es por esta razón que se usaron diferentes engranes, monedas, cadenas, tuercas y ornamentos.
 
-Enseguida se muestra la primer funcionalidad e interacción del proyecto terminado. Esta es la [interacción con las cuerdas](#interacción-con-cuerdas), en donde al dar click a una cuerda de la guitarra, esta emite el sonido correspodiente a la cuerda seleccionada. La cuerda seleccionada cambiará a color azul para saber que cuerda fue la seleccionada. 
+Enseguida se muestra la primer funcionalidad e interacción del proyecto terminado. Esta es la [interacción con las cuerdas](#interacción-con-cuerdas), en donde al dar click a una cuerda de la guitarra, esta emite el sonido correspondiente a la cuerda seleccionada. La cuerda seleccionada cambiará a color azul para saber que cuerda fue la seleccionada. 
 
 Sumando lo anterior, en el cuerpo de la guitarra, en la parte de arriba a la derecha esta un switch para el [efecto ghost](#efecto-ghost). Al hacer hover, se cambiará el color a azul igual que las cuerdas. Una vez seleccionado, los focos de la imagen en la parte inferior izquierda cambiarán, haciendo alusión a que los focos están prendidos. Una vez *"prendido"* el efecto, el uso es igual al de las cuerdas, al seleccionar una cuerda esta emitirá un sonido con el efecto ghost. 
 
@@ -16,7 +17,7 @@ En la parte inferior del centro en el cuerpo de la guitarra, hay dos perillas pa
 
 Para finalizar la parte frontal de la guitarra, tenemos el [cambio de fondo](#cambio-de-fondo) de la escena. En la parte superior izquierda se muestran *dos* botones, el primero (seleccionado por default) es un skybox de una caja metálica. Y el segundo es un fondo más simple de un tipo restaurante o bar. 
 
-Y por último, 
+Y por último, en la esquina superior derecha se encuentra el botón para `Cambiar Vista` a la parte trasera de la guitarra. Una vez seleccionado, se mostrará la parte trasera de la guitarra con algunas decoraciones similares a la parte delantera y una *válvula* con un círculo amarillo. Esta parte es la [caja de música](#caja-de-música), la cual funcionar al darle "cuerda" a la válvula haciendo click en el círculo y manteniendo presionado jalar a un lado de la pantalla. Al hacer esto, sonará un sonido, haciendo alusión a la cuerda y una vez que se llegue a las vueltas requeridas, sonará un fragmento de una canción. 
 
 ---
 
@@ -54,7 +55,8 @@ https://user-images.githubusercontent.com/42215186/142259499-699dd026-28f1-4633-
 
 
 ### Caja de Música 
-#### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
+> Nota: activar el sonido del video para escuchar la canción y sonido de cuerda
+#### Uso: dar click en `Cambiar Vista`para mostar la parte de atrás de la guitarra. Y *jalar* a un lado seleccionando el círculo amarrillo. Sonará como se da cuerda y finalmente al llegar a las vueltas requeridas sonará una pequeña canción. 
 
 https://user-images.githubusercontent.com/42215186/142265443-5bebb11d-9b2a-4d79-93ea-b75355cf8115.mp4
 
