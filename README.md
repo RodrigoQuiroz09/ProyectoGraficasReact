@@ -11,11 +11,12 @@ Enseguida se muestra la primer funcionalidad e interacción del proyecto termina
 
 Sumando lo anterior, en el cuerpo de la guitarra, en la parte de arriba a la derecha esta un switch para el [efecto ghost](#efecto-ghost). Al hacer hover, se cambiará el color a azul igual que las cuerdas. Una vez seleccionado, los focos de la imagen en la parte inferior izquierda cambiarán, haciendo alusión a que los focos están prendidos. Una vez *"prendido"* el efecto, el uso es igual al de las cuerdas, al seleccionar una cuerda esta emitirá un sonido con el efecto ghost. 
 
+En la parte inferior del centro en el cuerpo de la guitarra, hay dos perillas para el [cambio del volumen](#cambio-de-volumen). El funcionamiento es similar a los elementos anteriores, cuando se seleccione la de perilla izquierda, esta cambiara a color rojo y la perilla derecha a verde. El nivel de volumen por default es 10, este se puede disminuir con la perrilla *roja* y se incremente con la perrilla *verde*. 
 
 
 Para finalizar la parte frontal de la guitarra, tenemos el [cambio de fondo](#cambio-de-fondo) de la escena. En la parte superior izquierda se muestran *dos* botones, el primero (seleccionado por default) es un skybox de una caja metálica. Y el segundo es un fondo más simple de un tipo restaurante o bar. 
 
-
+Y por último, 
 
 ---
 
@@ -39,9 +40,9 @@ https://user-images.githubusercontent.com/42215186/142258519-3a163685-40a3-4139-
 https://user-images.githubusercontent.com/42215186/142260425-0fc5e240-5e66-44bd-a798-623b54edabb8.mp4
 
 
-### Cambio de Fondo
+### Cambio de Volumen
 > Nota: activar el sonido del video para escuchar el cambio de volumen
-#### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
+#### Uso: al hacer click en una de las perillas, la de color verde es para incrementar el nivel de volumen y la de color rojo para disminuirlo. 
 
 https://user-images.githubusercontent.com/42215186/142261105-471ab42c-89d7-45be-8a37-4ab92f167e88.mp4
 
@@ -52,11 +53,8 @@ https://user-images.githubusercontent.com/42215186/142261105-471ab42c-89d7-45be-
 https://user-images.githubusercontent.com/42215186/142259499-699dd026-28f1-4633-8220-78dae361c068.mp4
 
 
-
-
-
-
-
+### Caja de Música 
+#### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
 
 https://user-images.githubusercontent.com/42215186/142265443-5bebb11d-9b2a-4d79-93ea-b75355cf8115.mp4
 
