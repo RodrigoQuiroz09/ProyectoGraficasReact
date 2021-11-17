@@ -4,11 +4,21 @@ Christopher Luis Miranda Vanegas A01022676
 
 Rodrigo Quiroz Reyes A01026546
 
-Modelo Final (Blender)
+## Avance Final
+Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A continuación se muestra el modelo final de la guitarra en Blender, con texturas y materiales aplicados. Como se mencionó, buscamos crear una guitarra con estilo steampunk, es por esta razón que se usaron diferentes engranes, monedas, cadenes, tuercas y ornamentos.
+
+Enseguida se muestra la primer funcionalidad e interacción del proyecto terminado. Esta es la [interacción con las cuerdas](#requerimientos)
+
+
+### Modelo Final (Blender)
 
 https://user-images.githubusercontent.com/42215186/142253589-1fb0d69f-8c15-4c73-b247-c5c6abfe228f.mp4
 
 
+
+### Interacción con Cuerdas
+#### Nota: activar el sonido del video para escuchar las cuerdas
+#### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
 
 https://user-images.githubusercontent.com/42215186/142258519-3a163685-40a3-4139-b60d-baf428d2f146.mp4
 
