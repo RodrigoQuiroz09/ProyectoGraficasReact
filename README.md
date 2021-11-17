@@ -5,34 +5,43 @@ Christopher Luis Miranda Vanegas A01022676
 Rodrigo Quiroz Reyes A01026546
 
 ## Avance Final
-Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A continuación se muestra el modelo final de la guitarra en Blender, con texturas y materiales aplicados. Como se mencionó, buscamos crear una guitarra con estilo steampunk, es por esta razón que se usaron diferentes engranes, monedas, cadenes, tuercas y ornamentos.
+Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A continuación se muestra el [modelo final](#modelo-final) de la guitarra en *Blender*, con texturas y materiales aplicados. Como se mencionó, buscamos crear una guitarra con estilo steampunk, es por esta razón que se usaron diferentes engranes, monedas, cadenes, tuercas y ornamentos.
 
-Enseguida se muestra la primer funcionalidad e interacción del proyecto terminado. Esta es la [interacción con las cuerdas](#requerimientos)
+Enseguida se muestra la primer funcionalidad e interacción del proyecto terminado. Esta es la [interacción con las cuerdas](#interacción-con-cuerdas), en donde al dar click a una cuerda de la guitarra, esta emite el sonido correspodiente a la cuerda seleccionada. La cuerda seleccionada cambiará a color azul para saber que cuerda fue la seleccionada. 
+
+Sumando lo anterior, en el cuerpo de la guitarra, en la parte de arriba a la derecha esta un switch para el [efecto ghost](#efecto-ghost). 
 
 
-### Modelo Final (Blender)
+Después, tenemos el [cambio de fondo](#cambio-de-fondo) de la escena. En la parte superior izquierda se muestran *dos* botones, el primero (seleccionado por default) es un skybox de una caja metálica. Y el segundo es un fondo más simple de un tipo restaurante o bar. 
+
+
+
+---
+
+### Modelo Final
 
 https://user-images.githubusercontent.com/42215186/142253589-1fb0d69f-8c15-4c73-b247-c5c6abfe228f.mp4
 
 
 
 ### Interacción con Cuerdas
-#### Nota: activar el sonido del video para escuchar las cuerdas
+> Nota: activar el sonido del video para escuchar las cuerdas  
 #### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
 
 https://user-images.githubusercontent.com/42215186/142258519-3a163685-40a3-4139-b60d-baf428d2f146.mp4
 
 
-
-
-https://user-images.githubusercontent.com/42215186/142259499-699dd026-28f1-4633-8220-78dae361c068.mp4
-
-
-
-
+### Efecto Ghost
+> Nota: activar el sonido del video para escuchar el efecto en el sonido de las cuerdas
+#### Uso: 
 
 https://user-images.githubusercontent.com/42215186/142260425-0fc5e240-5e66-44bd-a798-623b54edabb8.mp4
 
+
+### Cambio de Fondo
+#### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
+
+https://user-images.githubusercontent.com/42215186/142259499-699dd026-28f1-4633-8220-78dae361c068.mp4
 
 
 
@@ -45,6 +54,7 @@ https://user-images.githubusercontent.com/42215186/142261105-471ab42c-89d7-45be-
 
 https://user-images.githubusercontent.com/42215186/142265443-5bebb11d-9b2a-4d79-93ea-b75355cf8115.mp4
 
+---
 
 ## Propuestas de Proyectos 
 1. [Guitarras steampunk](https://i.pinimg.com/736x/b7/28/1f/b7281f9481e5bcf81d1b558bc6263652.jpg)
@@ -84,6 +94,7 @@ E. Interruptor o botón para brindar mayor interacción con el usuario atrás de
 
 F. Cámara, se puede mover la perspectiva de la guitarra. 
 
+--- 
 ### Avances Primer Entrega:
 - En este avance se cargaron los modelos a utlizar para la funcionalidad y decoración. 
 - Se cargaron los sonidos de las cuerdas (carpeta de sounds). 
