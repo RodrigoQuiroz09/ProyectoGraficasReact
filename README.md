@@ -9,10 +9,11 @@ Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A 
 
 Enseguida se muestra la primer funcionalidad e interacción del proyecto terminado. Esta es la [interacción con las cuerdas](#interacción-con-cuerdas), en donde al dar click a una cuerda de la guitarra, esta emite el sonido correspodiente a la cuerda seleccionada. La cuerda seleccionada cambiará a color azul para saber que cuerda fue la seleccionada. 
 
-Sumando lo anterior, en el cuerpo de la guitarra, en la parte de arriba a la derecha esta un switch para el [efecto ghost](#efecto-ghost). 
+Sumando lo anterior, en el cuerpo de la guitarra, en la parte de arriba a la derecha esta un switch para el [efecto ghost](#efecto-ghost). Al hacer hover, se cambiará el color a azul igual que las cuerdas. Una vez seleccionado, los focos de la imagen en la parte inferior izquierda cambiarán, haciendo alusión a que los focos están prendidos. Una vez *"prendido"* el efecto, el uso es igual al de las cuerdas, al seleccionar una cuerda esta emitirá un sonido con el efecto ghost. 
 
 
-Después, tenemos el [cambio de fondo](#cambio-de-fondo) de la escena. En la parte superior izquierda se muestran *dos* botones, el primero (seleccionado por default) es un skybox de una caja metálica. Y el segundo es un fondo más simple de un tipo restaurante o bar. 
+
+Para finalizar la parte frontal de la guitarra, tenemos el [cambio de fondo](#cambio-de-fondo) de la escena. En la parte superior izquierda se muestran *dos* botones, el primero (seleccionado por default) es un skybox de una caja metálica. Y el segundo es un fondo más simple de un tipo restaurante o bar. 
 
 
 
@@ -33,9 +34,16 @@ https://user-images.githubusercontent.com/42215186/142258519-3a163685-40a3-4139-
 
 ### Efecto Ghost
 > Nota: activar el sonido del video para escuchar el efecto en el sonido de las cuerdas
-#### Uso: 
+#### Uso: activar el switch de la guitarra y seleccionar una cuerda para escuchar su sonido con el efecto
 
 https://user-images.githubusercontent.com/42215186/142260425-0fc5e240-5e66-44bd-a798-623b54edabb8.mp4
+
+
+### Cambio de Fondo
+> Nota: activar el sonido del video para escuchar el cambio de volumen
+#### Uso: al hacer click en una cuerda, esta se iluminará de color azul para visualizar cual es con la que se esta interactuando. 
+
+https://user-images.githubusercontent.com/42215186/142261105-471ab42c-89d7-45be-8a37-4ab92f167e88.mp4
 
 
 ### Cambio de Fondo
@@ -45,8 +53,6 @@ https://user-images.githubusercontent.com/42215186/142259499-699dd026-28f1-4633-
 
 
 
-
-https://user-images.githubusercontent.com/42215186/142261105-471ab42c-89d7-45be-8a37-4ab92f167e88.mp4
 
 
 
