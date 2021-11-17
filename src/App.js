@@ -29,7 +29,7 @@ let sound, song;
 
 let objects=[]
 let valve
-let modelUrls = ["./models/test/A.glb"];
+let modelUrls = ["./models/test/guitar.glb"];
 let grid=new THREE.GridHelper( 300, 10 ) 
 
 //const mapUrl = "./media/checker_large.gif";
@@ -230,7 +230,7 @@ class App extends Component {
     control.addEventListener( 'dragging-changed', function ( event ) {
       if(event.value){
         sound = new Pizzicato.Sound( './sounds/windClock.mp3' , () => {
-          sound.volume = 0.6;
+          sound.volume = 0.5;
           sound.play();
         });
       }
@@ -325,6 +325,7 @@ class App extends Component {
       {
           if ( intersected !== intersects[ 0 ].object ) 
           {
+            console.log(intersected)
 
               if ( intersected )
                   intersected.material.emissive.set( intersected.currentHex );
@@ -342,9 +343,9 @@ class App extends Component {
                  
                 ){
                 intersected.material.emissive.set('#00FFFF' );
-                } else if( intersected.name==="controls_Circle_Circle003"){
+                } else if( intersected.name==="perilla2"){
                   intersected.material.emissive.set('#FF0000' );
-                } else if( intersected.name==="controls_Circle_Circle002"){
+                } else if( intersected.name==="perilla1"){
                   intersected.material.emissive.set('#6ADD33' );
                 }
           }
@@ -433,11 +434,11 @@ class App extends Component {
         ghostBool=!ghostBool
         this.setState({...this.state, ghostBool: !this.state.ghostBool })
       }
-      if(clicked.name==="controls_Circle_Circle002")
+      if(clicked.name==="perilla1")
       {
         if(this.state.volume<10) this.setState({...this.state, volume: this.state.volume + 1 })
       }          
-      if(clicked.name==="controls_Circle_Circle003")
+      if(clicked.name==="perilla2")
       {
         if(this.state.volume>0) this.setState({...this.state, volume: this.state.volume - 1 })
       }
