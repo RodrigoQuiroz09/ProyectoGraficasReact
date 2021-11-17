@@ -5,6 +5,18 @@
 
 * Rodrigo Quiroz Reyes A01026546 Campus CSF
 
+## Instalación y Ejecución
+1. Para clonar el repositorio
+2. Crear una carpeta en la que se vaya a clonar el repositorio
+3. Mediante la terminal, navegar a dicha carpeta
+4. Correr el comando `git clone https://github.com/RodrigoQuiroz09/ProyectoGraficasReact.git`
+5. Navegar a la carpeta *ProyectoGraficasReact* en la terminal con el comando `cd ProyectoGraficasReact`
+6. Consultar https://reactnative.dev/docs/environment-setup para la instalación y configuración de React
+7. Correr el comando `npm install` para instalar los módulos y librerías necesarias
+8. Correr el comando `npm start` para correr la aplicación
+9. Explorar y disfrutar la guitarra! 😀
+
+
 ## Avance Final
 Nuestro proyecto final consiste en una guitarra estilo steampunk interactiva. A continuación, se muestra el [modelo final](#modelo-final) de la guitarra en *Blender*, con texturas y materiales aplicados. Como se mencionó, buscamos crear una guitarra con estilo steampunk, es por esta razón que se usaron diferentes engranes, monedas, cadenas, tuercas y ornamentos.
 
