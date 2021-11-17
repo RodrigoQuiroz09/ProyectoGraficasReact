@@ -4,8 +4,13 @@ Christopher Luis Miranda Vanegas A01022676
 
 Rodrigo Quiroz Reyes A01026546
 
+Modelo Final (Blender)
 
 https://user-images.githubusercontent.com/42215186/142253589-1fb0d69f-8c15-4c73-b247-c5c6abfe228f.mp4
+
+
+
+https://user-images.githubusercontent.com/42215186/142258519-3a163685-40a3-4139-b60d-baf428d2f146.mp4
 
 
 
