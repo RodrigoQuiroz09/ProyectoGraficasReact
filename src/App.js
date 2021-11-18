@@ -95,8 +95,8 @@ class App extends Component {
             })
 
             object.mixer = new THREE.AnimationMixer( scene );
-            for(let x=0;x<0;x++){
-              object.action = object.mixer.clipAction( result.animations[x], object).setDuration( 10.0 );
+            for(let x=0;x<35;x++){
+              object.action = object.mixer.clipAction( result.animations[x], object).setDuration( 20.0 );
               object.action.play(); 
             }
  
